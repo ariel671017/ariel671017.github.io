@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-        }
-        .container {
-            background-color: #f4f4f4;
-            border-radius: 5px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>AI Video Generator</title>
+    <link rel="stylesheet" href="htmltext2video/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My GitHub Pages Site</h1>
-        <p>This is a simple starter page for my GitHub Pages website.</p>
-        <p>I'll be updating this site soon with more content!</p>
+        <h1>AI Video Generator</h1>
+        <p>Enter a prompt below, and AI will generate a video for you!</p>
+        <form id="promptForm">
+            <textarea id="promptInput" placeholder="Enter your prompt here..." required></textarea>
+            <button type="submit">Generate Video</button>
+        </form>
+        <div id="loading" class="hidden">Generating your video... Please wait.</div>
+        <div id="videoContainer" class="hidden">
+            <h2>Your Generated Video</h2>
+            <video id="generatedVideo" controls></video>
+        </div>
     </div>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
