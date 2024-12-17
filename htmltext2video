@@ -8,10 +8,9 @@ body {
 }
 
 .container {
-    background-color: white;
+    max-width: 1000px; /* Wider container */
+    margin: 0 auto;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -56,9 +55,11 @@ button:hover {
 #videoContainer {
     margin-top: 20px;
     text-align: center;
+    width: 100%; /* Full width of the container */
 }
 
 #generatedVideo {
-    max-width: 100%;
-    border-radius: 4px;
+    max-width: 100%; /* Ensure it fits within the container */
+    width: 800px; /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
 }
